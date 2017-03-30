@@ -46,7 +46,11 @@ set.seed(12)
 ## Read in data
 train.data <- fread('train.csv', stringsAsFactors = TRUE, data.table = FALSE)
 
-View(train.data %>% filter(`1stFlrSF` > 4000)) ## Try adding a zero to SalePrice
+## Try adding a zero to SalePrice
+#View(train.data %>% filter(`1stFlrSF` > 4000)) 
+edit.id <- train.data %>% filter(`1stFlrSF` > 4000) %>% select(Id) %>% unlist
+train.data[edit.id, 'SalePrice'] <- train.data[edit.id, 'SalePrice'] * 10
+
 
 #==================================================================================================#
 #### Preliminary EDA ####
