@@ -11,8 +11,8 @@ Submissions are evaluated on the mean absolute error (MAE) between the predicted
 
 For every id in the test set, you should predict the loss value. The file should contain a header and have the following format:
 
-`id,loss \n
-4,0 \n
-6,1 \n
-9,99.3 \n
+`id,loss <br />
+4,0 <br />
+6,1 <br />
+9,99.3 <br />
 etc.`
